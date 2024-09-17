@@ -1,22 +1,24 @@
 package com.accounts;
 
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 
 public class GeoService {
 
-    private static double pi = 3.14;
- 
 
-    public float triangleArea(int base, int height) {
+    public static float triangleArea( float base, float height) {
         float area = (base * height) / 2;
 
         return area;
 
     }
+    public static double circleArea(float radius) {
+        double area = (Math.pow(radius, 2) * Math.PI );
 
-    public static float squareArea(int base) {
-        float area = (base * base);
+        return area;
+
+    }
+
+    public static float squareArea(int length) {
+        float area = (length * length);
 
         return area;
 
@@ -35,7 +37,7 @@ public class GeoService {
 
     }
 
-    public static double cilinderVolume(int height, float radius) {
+    public static double cilinderVolume(float height, float radius) {
         float r = radius * radius;
         double volume = (Math.PI * r * height);
 
@@ -43,8 +45,8 @@ public class GeoService {
 
     }
 
-    public double sphereVolume(float radius) {
-        double volume = (4 * (pi * Math.pow(radius, 3))) / 3;
+    public static double sphereVolume(float radius) {
+        double volume = (4 * (Math.PI * Math.pow(radius, 3))) / 3;
 
         return volume;
     }
